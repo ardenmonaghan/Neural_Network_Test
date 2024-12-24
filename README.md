@@ -38,14 +38,14 @@ w = w - step_size * dw1 (with respect to the current index of the w vector that 
 This rule is done for all w vectors and we can find the w values that will minimize he loss function
 
 ## Some important functions that we have:
-- get_predictions(A2): this is a function meant to basically be the function predictor that deternmines from the output layer which is the most likely number we can classify
+- ```get_predictions(A2):``` this is a function meant to basically be the function predictor that deternmines from the output layer which is the most likely number we can classify
 
-- initialize_parameters() this is how we initialize all of the weight vectors and the biases that we can use, this is what we initially call gradient descent on which will change these values into the 
+- ```initialize_parameters():``` this is how we initialize all of the weight vectors and the biases that we can use, this is what we initially call gradient descent on which will change these values into the 
 w and b values hat minimize the loss function
 
-- get_accuracy(predictions, Y): this is a direct comparison between the outputted label and the actual value of the image (y).
+- ```get_accuracy(predictions, Y):``` this is a direct comparison between the outputted label and the actual value of the image (y).
 
-- one_hot(Y): This allows us to chnage the y label to being a vector with size 10. Considering the output of our neural network is a vector of probabilities we can use the one_hot encoded y 
+- ```one_hot(Y):``` This allows us to chnage the y label to being a vector with size 10. Considering the output of our neural network is a vector of probabilities we can use the one_hot encoded y 
 value as comparing the vector after the function gives the max probability inside of the outputted vector from the neural network.
 ex) if we have probabilities (0.1, 0.05, 0.05, 0.2, 0.1, 0.02, 0.03, 0.02, 0.03, 0.40) then the get_predcitions will output (0,0,0,0,0,0,0,0,0,1)
 and if correct label is 9 then the one hot encoded vector will be (0,0,0,0,0,0,0,0,1) which matches so this is a correct prediction.
