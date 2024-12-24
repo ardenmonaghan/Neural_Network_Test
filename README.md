@@ -8,7 +8,7 @@ Main implementation resides in NN_test.ipynb
 - A chunk of the tutorial was followed from: https://www.youtube.com/watch?v=w8yWXqWQYmU (mostly with  dealing with the backpropagation step) However a lot of the existing code needed to be refactored and changed to prevent specific errors from occuring
 - Fixed the normalization of data issue, possible exploding gradient problem.
 
-## How Neural Network works In this Case (Summary for myself):
+## How Neural Network works In this Case (Quick Summary Written by Me):
 A neural is a specific type of machine learning method which inputs features and outputs a predictor (just like ERM or MLE) We try to minimize the loss to find the best
 possible predictor which can be used on the testing set (estimate of the expected loss) that helps determine how well your outputted predictor performs on new data
 
