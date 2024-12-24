@@ -5,7 +5,7 @@ Main implementation resides in NN_test.ipynb
 ## Summary of The Code:
 - This is an implementation of a neural network form scratch with 2 layers that Is meant to classify numbers from 0 - 9 (10 possible classes)
 - Uses matplotlib, numpy, and pandas
-- Tutorial mostly followed from: https://www.youtube.com/watch?v=w8yWXqWQYmU However a lot of the existing code needed to be refactored and changed to prevent specific errors from occuring
+- A chunk of the tutorial was followed from: https://www.youtube.com/watch?v=w8yWXqWQYmU (mostly with  dealing with the backpropagation step) However a lot of the existing code needed to be refactored and changed to prevent specific errors from occuring
 - Fixed the normalization of data issue, possible exploding gradient problem.
 
 ## How Neural Network works In this Case (Summary for myself):
