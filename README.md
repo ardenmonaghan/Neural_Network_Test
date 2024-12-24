@@ -24,11 +24,31 @@ as it allows us to represent the probabilities between 0 and 1. In this case it 
 This is the process of running gradient descent on the neurons to try and find values of W that minimize the loss of all the w vectors that point towards the nodes in the current layer.
 Through the chain rule we can get the first derivative with respect to w. Once we do this we have to run gradient descent which is back propagation from the current layer towards previous layers.
 REMEMBER that W is a vector
-| W0,0 ... W0,n |    |a1(L - 1)|
-| W1,0 ... W1,n |    |a2(L - 1)|
-| W2,0 ... W2,n | *  |a3(L - 1)|
-| ...           |    |...      |
-| Wd,0 ... Wd,n |    |ad(L - 1)|
+\[
+\begin{bmatrix}
+W_{0,0} & \cdots & W_{0,n} \\
+W_{1,0} & \cdots & W_{1,n} \\
+W_{2,0} & \cdots & W_{2,n} \\
+\vdots & \ddots & \vdots \\
+W_{d,0} & \cdots & W_{d,n}
+\end{bmatrix}
+\cdot
+\begin{bmatrix}
+a_1^{(L-1)} \\
+a_2^{(L-1)} \\
+a_3^{(L-1)} \\
+\vdots \\
+a_n^{(L-1)}
+\end{bmatrix}
+=
+\begin{bmatrix}
+z_1^{(L)} \\
+z_2^{(L)} \\
+z_3^{(L)} \\
+\vdots \\
+z_d^{(L)}
+\end{bmatrix}
+\]
 
 The update rule for each is 
 w = w - step_size * dw1 (with respect to the current index of the w vector that we want to minimize) 
