@@ -50,4 +50,14 @@ value as comparing the vector after the function gives the max probability insid
 ex) if we have probabilities (0.1, 0.05, 0.05, 0.2, 0.1, 0.02, 0.03, 0.02, 0.03, 0.40) then the get_predcitions will output (0,0,0,0,0,0,0,0,0,1)
 and if correct label is 9 then the one hot encoded vector will be (0,0,0,0,0,0,0,0,1) which matches so this is a correct prediction.
 
+## Idea Behind CNNs
+
+- Preserving the 2d Structure of the image
+- First layer has 3 channels (RGB) so it has 3 channels in first layer with 28x28 pixels which all need filters applied to them.
+
+- First Step: Convolutional Layer. The amount of filters will determine the amount of neurons in the next layer. Filter is similar to a matrix of weights being applied and then getting the dot product + bias. 
+- Second Step: Pooling Layer. This is a downsampling layer which will reduce the size of the image. This is done by taking the max of the 2x2 matrix and for each channel. The next layer will have same amount of channels but the dimensions will be reduced.
+- Can perform more convolutions and pooling layers to get more features
+- Next we flatten the output and then apply a fully connected layer (MLP method)
+
 
